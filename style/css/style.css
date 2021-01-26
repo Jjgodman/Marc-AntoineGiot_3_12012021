@@ -190,7 +190,9 @@
 
 .resto {
   display: flex;
+  pointer-events: none;
   margin-bottom: 15px;
+  z-index: 0;
   flex-direction: column;
   height: 250px;
   width: 350px;
@@ -247,10 +249,21 @@
 
 .acceuil .heart {
   width: 25px;
-  z-index: 1;
+  z-index: 2;
   position: relative;
   top: -65px;
   right: -310px;
+}
+.acceuil .heart:active {
+  animation: heartA 500ms both;
+  animation-timing-function: ease-in-out;
+}
+.acceuil .heartC {
+  width: 25px;
+  z-index: 1;
+  position: relative;
+  top: -65px;
+  right: -281px;
 }
 
 footer {
@@ -398,6 +411,14 @@ footer .logo_temp {
   to {
     opacity: 1;
     margin-top: initial;
+  }
+}
+@keyframes heartA {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
