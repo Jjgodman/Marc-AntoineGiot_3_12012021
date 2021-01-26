@@ -82,14 +82,14 @@
   margin-right: auto;
   margin-top: 0;
   text-align: center;
-  width: 250px;
+  width: 65%;
   padding-top: 40px;
 }
 .intro p {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 350px;
+  width: 90%;
   font-size: 20px;
   margin-bottom: 30px;
 }
@@ -100,7 +100,7 @@
   margin-right: auto;
   justify-content: center;
   font-size: 17px;
-  width: 250px;
+  width: 65%;
   height: 60px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
@@ -148,7 +148,7 @@
   right: -15px;
 }
 .aide .notice {
-  width: 350px;
+  width: 90%;
   height: 80px;
   border-radius: 20px;
   background-color: #F6F6F6;
@@ -200,7 +200,7 @@
   z-index: 0;
   flex-direction: column;
   height: 250px;
-  width: 350px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
@@ -215,10 +215,10 @@
 .resto .__nom {
   height: 80px;
   margin-top: 145px;
-  width: 375px;
+  width: 100%;
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.7fr 0.3fr;
   grid-template-rows: 1fr 1fr;
   gap: 5px 0px;
   grid-template-areas: "titre image" "titre2 image";
@@ -246,7 +246,7 @@
   color: #278870;
   font-weight: bold;
   border-radius: 2px;
-  right: -250px;
+  left: 70%;
   top: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -255,7 +255,7 @@
 .acceuil #restaurants .heart {
   position: relative;
   top: -65px;
-  right: -310px;
+  right: -83%;
   width: 25px;
   z-index: 2;
 }
@@ -269,7 +269,7 @@
   z-index: 1;
   position: relative;
   top: -65px;
-  right: -281px;
+  right: -75.1%;
 }
 
 footer {
@@ -312,8 +312,8 @@ footer .logo_temp {
   z-index: 1;
 }
 
-#img-franc, #img-palette, #img-note {
-  width: 375px;
+#img-franc, #img-palette, #img-note, #img-delice {
+  width: 100%;
   z-index: 0;
 }
 
@@ -343,7 +343,7 @@ footer .logo_temp {
 }
 
 .repas {
-  width: 340px;
+  width: 95%;
   height: 70px;
   padding-left: 10px;
   margin-left: auto;
@@ -352,11 +352,16 @@ footer .logo_temp {
   border-radius: 15px;
   margin-bottom: 20px;
 }
+.repas:active {
+  background-color: yellow;
+}
 .repas .prix {
   position: relative;
-  right: -300px;
+  right: -85%;
+  width: 40px;
   top: -20px;
   font-weight: 500;
+  margin-right: 0;
 }
 .repas .check {
   width: 25px;
@@ -364,6 +369,10 @@ footer .logo_temp {
 }
 .repas p, .repas h3 {
   margin: 0;
+  width: 80%;
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .repas h3 {
   font-size: 20px;
@@ -437,6 +446,76 @@ footer .logo_temp {
   }
   to {
     opacity: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .boutton1 {
+    width: 350px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #articles {
+    display: flex;
+    justify-content: space-around;
+  }
+  #articles article {
+    width: 350px;
+  }
+
+  #liste_resto {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+  }
+
+  .heart {
+    left: -130px;
+  }
+
+  .heartC {
+    left: -130px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60px;
+    padding-top: 54px;
+  }
+  footer .logo_temp {
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    padding: 0;
+  }
+
+  .menu {
+    top: -300px;
+    height: 800px;
+  }
+
+  .enplde {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .restaurant footer {
+    position: relative;
+  }
+  .restaurant .boutton1 {
+    margin-top: 100px;
+  }
+  .restaurant .h2 {
+    margin-bottom: 100px;
+  }
+
+  .repas {
+    margin-bottom: 50px;
+    width: 300px;
   }
 }
 
