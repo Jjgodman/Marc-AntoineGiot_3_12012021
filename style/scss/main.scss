@@ -110,6 +110,9 @@ $delay-check :500ms;
     input[type="image"]{
         width: 15px;
     };
+    h2{
+        display: none;
+    }
     input[type="button"]{
         background-color: $fond2;
         width: 185px;
@@ -318,7 +321,6 @@ $delay-check :500ms;
             &:hover{
                 -webkit-text-stroke-width: 0px;
                 background:-webkit-linear-gradient(top, $primary, $secondary);
-                background-clip:text;
                 -webkit-background-clip:text;
                 color:transparent;
                 font-size: 28px;
@@ -368,7 +370,6 @@ footer{
         &:hover{
             -webkit-text-stroke-width: 0px;
             background:-webkit-linear-gradient(top, $primary, $secondary);
-            background-clip:text;
             -webkit-background-clip:text;
             color:transparent;
             font-size: 28px;
