@@ -8,8 +8,13 @@
         <link rel="stylesheet" href="style/css/style.css" />
         <title>OhMyFood</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
     </head>
+
+    <div class="loader">
+        <i class="fas fa-circle-notch"></i>
+    </div>
 
     <body class="page acceuil">
 
@@ -17,94 +22,108 @@
             <img src="./images/logo/ohmyfood.png" alt="logo"/>
         </header>
 
-        <section class="search-city">
-            <input type="image" src="./images/icon/localisation.svg" alt="localisation">
-            <input type="button" value="Paris, Belleville">
-        </section>
+        <div class="contenu">
+            <section class="search-city">
+                <input type="image" src="./images/icon/localisation.svg" alt="localisation">
+                <input type="button" value="Paris, Belleville">
+            </section>
 
-        <section class="intro">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
-            <input class="boutton1" type="button" href="#restaurants" value="Explorer nos restaurants">
-        </section>
+            <section class="intro">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
+                <input class="boutton1" type="button" href="#restaurants" value="Explorer nos restaurants" onclick="window.location.href = '#restaurants'">
+            </section>
 
-        <section class="aide">
-            <header>
-                <h2>Fonctionnement</h2>
-            </header>
-            <div id="articles">
-            <article>
-                <p class="num">1</p>
-                <div class="notice">
-                    <img src="./images/icon/mobile.svg" alt="mobile"/>
-                    <h3>Choisissez un restaurant</h3>
+            <section class="aide">
+                <header>
+                    <h2>Fonctionnement</h2>
+                </header>
+                <div id="articles">
+                <article>
+                    <p class="num">1</p>
+                    <div class="notice">
+                        <img src="./images/icon/mobile.svg" alt="mobile"/>
+                        <h3>Choisissez un restaurant</h3>
+                    </div>
+                </article>
+                <article>
+                    <p class="num">2</p>
+                    <div class="notice">
+                        <img src="./images/icon/list.svg" alt="list"/>
+                        <h3>Composez votre menu</h3>
+                    </div>
+                </article>
+                <article>
+                    <p class="num">3</p>
+                    <div class="notice violet">
+                        <img src="./images/icon/store.svg" alt="store"/>
+                        <h3>Dégustez au restaurant</h3>
+                    </div>
+                </article>
                 </div>
-            </article>
-            <article>
-                <p class="num">2</p>
-                <div class="notice">
-                    <img src="./images/icon/list.svg" alt="list"/>
-                    <h3>Composez votre menu</h3>
-                </div>
-            </article>
-            <article>
-                <p class="num">3</p>
-                <div class="notice">
-                    <img src="./images/icon/store.svg" alt="store"/>
-                    <h3>Dégustez au restaurant</h3>
-                </div>
-            </article>
-            </div>
-        </section>
+            </section>
 
-        <section id="restaurants">
-            <h2>Restaurant</h2>
-            <div id="liste_resto">
-                <a class="resto" id="palette" href="./restaurants/LaPalette.html">
-                    <span class="new">Nouveau</span>
-                    <div class="__nom">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+            <section id="restaurants">
+                <h2>Restaurant</h2>
+                <div id="liste_resto">
+                    <div class="rest">
+                        <a class="resto" id="palette" href="./restaurants/LaPalette.html">
+                            <span class="new">Nouveau</span>
+                            <div class="__nom">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </a>
+                        <span>
+                            <i class="fas fa-heart"></i>
+                        </span>
                     </div>
-                </a>
-                <input class="heart" type="image" src="./images/icon/heart.svg" alt="heart"/>
-                <input class="heartC" type="image" src="./images/icon/heart_color.svg" alt="heart color"/>
-                <a class="resto" id="enchante" href="./restaurants/LaNote.html">
-                    <span class="new">Nouveau</span>
-                    <div class="__nom">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
+                    <div class="rest">
+                        <a class="resto" id="enchante" href="./restaurants/LaNote.html">
+                            <span class="new">Nouveau</span>
+                            <div class="__nom">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                        </a>
+                        <span>
+                            <i class="fas fa-heart"></i>
+                        </span>
                     </div>
-                </a>
-                <input class="heart" type="image" src="./images/icon/heart.svg" alt="heart"/>
-                <input class="heartC" type="image" src="./images/icon/heart_color.svg" alt="heart color"/>
-                <a class="resto" id ="alafrancaise"href="./restaurants/ALaFrançaise.html">
-                    <span class="new">Nouveau</span>
-                    <div class="__nom">
-                        <h3>À la française</h3>
-                        <p>Cité Rouge</p>
+                    <div class="rest">
+                        <a class="resto" id ="alafrancaise"href="./restaurants/ALaFrançaise.html">
+                            <span class="new">Nouveau</span>
+                            <div class="__nom">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                        </a>
+                        <span>
+                            <i class="fas fa-heart"></i>
+                        </span>
                     </div>
-                </a>
-                <input class="heart" type="image" src="./images/icon/heart.svg" alt="heart"/>
-                <input class="heartC" type="image" src="./images/icon/heart_color.svg" alt="heart color"/>
-                <a class="resto" id="delice" href="./restaurants/LeDelice.html">
-                    <span class="new">Nouveau</span>
-                    <div class="__nom">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+                    <div class="rest">
+                        <a class="resto" id="delice" href="./restaurants/LeDelice.html">
+                            <span class="new">Nouveau</span>
+                            <div class="__nom">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                        </a>
+                        <span>
+                                <i class="fas fa-heart"></i>
+                        </span>
                     </div>
-                </a>
-                <input class="heart" type="image" src="./images/icon/heart.svg" alt="heart"/>
-                <input class="heartC" type="image" src="./images/icon/heart_color.svg" alt="heart color"/>
-            </div>
-        </section>
+                </div>
+            </section>
         
-        <footer>
-            <img src="../Marc-AntoineGiot_3_12012021/images/logo/ohmyfood@2x.svg" alt="logo" class="logo_temp"/>
-            <a href="#"><img src="./images/icon/utensils.svg" alt="utensils"/>Proposer votre restaurant</a>
-            <a href="#"><img src="./images/icon/hands.svg" alt="hands"/>Devenir partenaire</a>
-            <a href="#">Mention légales</a>
-            <a href="mailto:test@test.com">Contact</a>
-        </footer>
+            <footer>
+                <img src="../Marc-AntoineGiot_3_12012021/images/logo/ohmyfood@2x.svg" alt="logo" class="logo_temp"/>
+                <a href="#"><img src="./images/icon/utensils.svg" alt="utensils"/>Proposer votre restaurant</a>
+                <a href="#"><img src="./images/icon/hands.svg" alt="hands"/>Devenir partenaire</a>
+                <a href="#">Mention légales</a>
+                <a href="mailto:test@test.com">Contact</a>
+            </footer>
+        </div>
     </body>
 </html>

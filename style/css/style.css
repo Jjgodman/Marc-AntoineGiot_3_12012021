@@ -1,3 +1,20 @@
+.loader {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 200px;
+  font-size: 40px;
+  color: #9356DC;
+  animation: loading 1500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.contenu {
+  animation: apparition 1800ms;
+  animation-fill-mode: forwards;
+}
+
 .page {
   margin: 0;
 }
@@ -96,6 +113,7 @@
 
 .boutton1 {
   display: flex;
+  outline-style: none;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -131,6 +149,9 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+.aide img[alt=store] {
+  opacity: 1;
+}
 .aide .num {
   background-color: #9356DC;
   width: 25px;
@@ -156,6 +177,9 @@
   margin-right: 20px;
   margin-left: auto;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.aide .notice.violet {
+  background-color: #9356DC2a;
 }
 .aide .notice h3 {
   margin-top: auto;
@@ -208,13 +232,14 @@
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 }
 .resto:visited {
   color: black;
 }
 .resto .__nom {
   height: 80px;
-  margin-top: 145px;
+  margin-top: 180px;
   width: 100%;
   background-color: white;
   display: grid;
@@ -237,7 +262,7 @@
   align-self: end;
 }
 .resto .new {
-  position: relative;
+  position: absolute;
   float: right;
   padding: 5px 10px;
   width: min-content;
@@ -246,30 +271,35 @@
   color: #278870;
   font-weight: bold;
   border-radius: 2px;
-  left: 70%;
+  right: 20px;
   top: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.acceuil #restaurants .heart {
+.acceuil #restaurants .rest {
   position: relative;
-  top: -65px;
-  right: -83%;
-  width: 25px;
-  z-index: 2;
 }
-.acceuil #restaurants .heart:hover {
-  animation: heartA 500ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.acceuil #restaurants .rest .fas {
+  padding: 15px;
+  position: absolute;
+  z-index: 0;
+  right: 25px;
+  top: 185px;
+  font-size: 26px;
+  color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
 }
-.acceuil #restaurants .heartC {
-  width: 25px;
-  z-index: 1;
-  position: relative;
-  top: -65px;
-  right: -75.1%;
+.acceuil #restaurants .rest .fas:hover {
+  -webkit-text-stroke-width: 0px;
+  background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 28px;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }
 
 footer {
@@ -296,20 +326,26 @@ footer .logo_temp {
   padding: 23px 0;
 }
 
-.restaurant .heart {
-  width: 25px;
-  position: relative;
-  right: -67px;
-  z-index: 2;
+.restaurant .fas {
+  padding: 15px;
+  position: absolute;
+  z-index: 4;
+  right: 10px;
+  top: 25px;
+  font-size: 26px;
+  color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
 }
-.restaurant .heart:hover {
-  animation: heartA 500ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-.restaurant .heartC {
-  width: 25px;
-  z-index: 1;
+.restaurant .fas:hover {
+  -webkit-text-stroke-width: 0px;
+  background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 28px;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }
 
 #img-franc, #img-palette, #img-note, #img-delice {
@@ -344,6 +380,7 @@ footer .logo_temp {
 
 .repas {
   width: 95%;
+  position: relative;
   height: 70px;
   padding-left: 10px;
   margin-left: auto;
@@ -351,21 +388,34 @@ footer .logo_temp {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
-.repas:active {
-  background-color: yellow;
+.repas:hover .prix {
+  animation: prix 500ms forwards;
+}
+.repas:hover .check {
+  animation: check 500ms forwards;
+}
+.repas:hover .check img {
+  animation: rotationC 700ms;
+}
+.repas:hover p, .repas:hover h3 {
+  animation: texte-menu 500ms forwards;
 }
 .repas .prix {
-  position: relative;
-  right: -85%;
+  position: absolute;
+  right: 0;
   width: 40px;
-  top: -20px;
+  top: 35px;
   font-weight: 500;
-  margin-right: 0;
 }
 .repas .check {
+  position: absolute;
+  right: -70px;
+  top: 0;
   width: 25px;
-  display: none;
+  background-color: #99E2D0;
+  padding: 22.5px 20px;
 }
 .repas p, .repas h3 {
   margin: 0;
@@ -440,12 +490,59 @@ footer .logo_temp {
     margin-top: initial;
   }
 }
-@keyframes heartA {
+@keyframes apparition {
   from {
+    opacity: 0;
+  }
+  84% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  99% {
     opacity: 1;
   }
   to {
+    transform: rotate(720deg);
     opacity: 0;
+  }
+}
+@keyframes prix {
+  from {
+    right: 0;
+  }
+  to {
+    right: 70px;
+  }
+}
+@keyframes check {
+  from {
+    right: -70px;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes rotationC {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes texte-menu {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -467,16 +564,12 @@ footer .logo_temp {
 
   #liste_resto {
     display: flex;
+    margin-left: -60px;
     justify-content: space-around;
     padding-left: 5%;
   }
-
-  .heart {
-    left: -130px;
-  }
-
-  .heartC {
-    left: -130px;
+  #liste_resto .rest {
+    min-width: 350px;
   }
 
   footer {
@@ -491,11 +584,6 @@ footer .logo_temp {
     top: -20px;
     z-index: 2;
     padding: 0;
-  }
-
-  .menu {
-    top: -300px;
-    height: 800px;
   }
 
   .enplde {
@@ -516,6 +604,11 @@ footer .logo_temp {
   .repas {
     margin-bottom: 50px;
     width: 300px;
+  }
+
+  #img-franc, #img-palette, #img-note, #img-delice {
+    object-fit: cover;
+    height: 450px;
   }
 }
 
