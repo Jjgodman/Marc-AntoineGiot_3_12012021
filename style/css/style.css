@@ -64,11 +64,13 @@
 .logo a {
   align-content: center;
 }
-.logo a img {
-  width: 20px;
-  margin-top: 20px;
-  margin-left: 15px;
+.logo a .fas {
+  font-size: 36px;
+  position: absolute;
   float: left;
+  margin-top: 15px;
+  margin-left: 25px;
+  color: black;
 }
 
 .search-city {
@@ -91,6 +93,10 @@
   border: none;
   font-weight: bold;
   font-size: 18px;
+}
+.search-city .fas {
+  font-size: 20px;
+  margin-top: 15px;
 }
 
 .intro {
@@ -181,8 +187,9 @@
   margin-left: auto;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
-.aide .notice.violet {
+.aide .notice:hover {
   background-color: #9356DC2a;
+  transition: 200ms;
 }
 .aide .notice h3 {
   margin-top: auto;
@@ -190,6 +197,13 @@
   margin-bottom: auto;
   width: 100%;
   font-size: 16px;
+}
+.aide .notice .fas {
+  vertical-align: middle;
+  margin-left: 35px;
+  margin-top: 33px;
+  opacity: 0.5;
+  font-size: 20px;
 }
 
 #restaurants {
@@ -273,7 +287,7 @@
   background-color: #99E2D0;
   color: #278870;
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 4px;
   right: 20px;
   top: 20px;
   font-family: "Roboto", sans-serif;
@@ -319,16 +333,16 @@ footer a {
   color: white;
   margin-bottom: 7px;
 }
-footer a img {
-  width: 12px;
-  margin-right: 7px;
+footer a .fas {
+  font-size: 12px;
+  margin-right: 5px;
 }
 footer .logo_temp {
   width: 100px;
   padding: 23px 0;
 }
 
-.restaurant .fas {
+.restaurant .menu .fas {
   padding: 15px;
   position: absolute;
   z-index: 4;
@@ -339,7 +353,7 @@ footer .logo_temp {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
 }
-.restaurant .fas:hover {
+.restaurant .menu .fas:hover {
   -webkit-text-stroke-width: 0px;
   background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
   -webkit-background-clip: text;

@@ -92,11 +92,13 @@ $delay-check :500ms;
     }
     a{ 
         align-content: center;
-        img{
-            width: 20px;
-            margin-top: 20px;
-            margin-left: 15px;
+        .fas{
+            font-size: 36px;
+            position:absolute;
             float: left;
+            margin-top: 15px;
+            margin-left: 25px;
+            color: black;
         }
     }
 }
@@ -119,6 +121,10 @@ $delay-check :500ms;
         border: none;
         font-weight: bold;
         font-size: 18px;
+    }
+    .fas{
+        font-size: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -203,8 +209,9 @@ $delay-check :500ms;
         margin-right: 20px;
         margin-left: auto;
         @include shadow();
-        &.violet{
+        &:hover{
             background-color: #9356DC2a;
+            transition: 200ms;
         }
         h3{
             margin-top: auto;
@@ -212,6 +219,13 @@ $delay-check :500ms;
             margin-bottom: auto;
             width: 100%;
             font-size: 16px;
+        }
+        .fas{
+            vertical-align: middle;
+            margin-left: 35px;
+            margin-top: 33px;
+            opacity: 0.5;
+            font-size: 20px;
         }
     }
 }
@@ -297,7 +311,7 @@ $delay-check :500ms;
         background-color: $third;
         color: darken($color: $third, $amount: 40);
         font-weight: bold;
-        border-radius: 2px;
+        border-radius: 4px;
         right: 20px;
         top: 20px;
         font-family: 'Roboto', sans-serif;
@@ -345,9 +359,9 @@ footer{
         text-decoration: none;
         color: white;
         margin-bottom: 7px;
-        img{
-            width: 12px;
-            margin-right: 7px
+        .fas{
+            font-size: 12px;
+            margin-right: 5px
         }
     };
     .logo_temp{
@@ -357,7 +371,7 @@ footer{
 }
 
 .restaurant{
-    .fas{
+    .menu .fas{
         padding: 15px;
         position: absolute;
         z-index: 4;
